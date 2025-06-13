@@ -29,30 +29,9 @@ export default function Tasks({ setFirstEntrer}) {
                     :
 
                     <div className={"border-3 border-accent mb-3 rounded-tr-xl rounded-bl-xl bg-info-content"}>
-
-                        <div className={"px-2 pt-2"}>
-                            <input type="checkbox" defaultChecked className="checkbox checkbox-primary" />
-                        </div>
-
-                        <li className="p-4 pb-2 text-xs opacity-60 tracking-wide">.. / .. / ..</li>
-                        <li className="list-row">
-                            <div className="text-4xl font-thin opacity-30 tabular-nums">01</div>
-                            <div>
-                                <div>XXX</div>
-                                <div className="text-xs uppercase font-semibold opacity-60">User</div>
-                            </div>
-                            <p className="list-col-wrap text-xs">
-                                Il n y a pas de tache a l horizon
-                            </p>
-
-                            <button className="btn btn-square btn-ghost hover:btn-info">
-                                <Pencil/>
-                            </button>
-
-                            <button className="btn btn-square btn-warning">
-                                <Trash/>
-                            </button>
-                        </li>
+                        <p className="text-center text-2xl opacity-60 py-4 tracking-wide font-semibold text-accent ">
+                            Aucune tache
+                        </p>
                     </div>
 
                     :
