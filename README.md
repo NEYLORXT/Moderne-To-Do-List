@@ -1,7 +1,56 @@
-# React + Tailwindcss + Vite
+# React + Tailwindcss + DaisyUI + lucide-react (icônes) + Vite
 
-This template provides a minimal setup to get React and Tailwindcss working in Vite with HMR and some ESLint rules.
+# 📝 Moderne-To-Do-List
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-- [@tailwindcss/vite](https://github.com/tailwindlabs/tailwindcss)
+Une application de gestion de tâches moderne construite avec **React.js**. Elle utilise le **Context API** pour la gestion globale des données et **localStorage** pour la persistance des tâches.
+
+> Exemple : Une application de gestion de tâches simple avec React.js et stockage local.
+
+---
+
+## 🚀 Fonctionnalités
+
+- ✅ Ajouter, modifier, supprimer des tâches
+- ✅ Sauvegarde automatique avec `localStorage`
+- ✅ Interface moderne et responsive
+- ✅ Marquer une tâche comme terminée (avec case à cocher)
+- ✅ Architecture modulaire avec composants réutilisables
+- ✅ Conçu pour être facilement étendu
+- 🧠 Construit avec `React Context`
+
+---
+
+## 🛠️ Technologies utilisées
+
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/)
+- Context API
+- localStorage
+  
+## 🛠️ Technologies utilisées
+
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/)
+- [Vite](https://vite.dev/)
+- [DaisyUI](https://daisyui.com/)
+- Context API
+- localStorage
+
+---
+
+## 📦 Installation
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/NEYLORXT/Moderne-To-Do-List.git
+
+# Aller dans le dossier
+cd todo-app-react
+
+# Installer les dépendances
+npm install
+
+# Lancer le projet
+npm run dev
