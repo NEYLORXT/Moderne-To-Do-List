@@ -14,7 +14,7 @@ export default function Index() {
 
     return <>
         <main className={ "min-h-screen"}>
-            <Header setShowList={setShowList}/>
+            <Header setShowList={setShowList} setFirstEntrer={setFirstEntrer}/>
 
             { ( showList ) && <Hero children={<Tasks setFirstEntrer={setFirstEntrer}  />} /> }
 

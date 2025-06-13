@@ -1,9 +1,12 @@
 import Index from "./Pages/Index.jsx";
+import {TodoProvider} from "./Pages/Components/TodoContext.jsx";
 
 function App() {
   return (
     <>
-      <Index />
+      <TodoProvider>
+          <Index />
+      </TodoProvider>
     </>
   );
 }

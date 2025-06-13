@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import {useTodo} from "./TodoContext.jsx";
 import {ChevronLeft} from "lucide-react";
 
-export default function AddNewTask({ setFirstEntrer}) {
+export default function EditTask({ setFirstEntrer, todo, setEdit}) {
     const [isLoadingButton, setIsLoadingButton] = useState(false);
 
-    const { addTodo } = useTodo();
+    const { editerTodo } = useTodo();
 
-    const handleAddTask = (formData) => {
+    const handleUpdateTask = (formData) => {
         handleClick_setLoadingButton(true);
 
 
@@ -43,17 +43,22 @@ export default function AddNewTask({ setFirstEntrer}) {
             handleClick_setLoadingButton(false)
 
             const newTodo = {
-                id: Math.random(),
+                id: todo.id,
                 titre: formData.get('titre'),
                 description: formData.get('description'),
                 date: formData.get('date'),
                 priority: formData.get('priority'),
-                isDone: false,
+                isDone: todo.isDone,
             }
 
-            addTodo(newTodo);
+            console.log(newTodo);
+
+
+
+            editerTodo(todo.id, newTodo);
 
             setFirstEntrer(true);
+            setEdit(false);
         }, 2000);
 
 
@@ -67,25 +72,25 @@ export default function AddNewTask({ setFirstEntrer}) {
 
 
     return ( <>
-        <form action={handleAddTask}>
+        <form action={handleUpdateTask} className="flex flex-col mx-auto">
             <fieldset className="fieldset relative bg-base-200 border-white-300 rounded-box w-xs md:w-md border p-4 shadow-md shadow-gray-500 ">
-                <legend className="fieldset-legend px-5">Create</legend>
+                <legend className="fieldset-legend px-5">UPDATE TASK</legend>
 
                 <button className="btn btn-soft btn-warning my-3 absolute top-0 left-4 "
-                        onClick={() => setFirstEntrer(true)}>
+                        onClick={() => setEdit(false)}>
                     <ChevronLeft />
                 </button>
 
                 <label className="label text-gray-300 mt-15">Titre</label>
-                <input type="text" name={'titre'} className="input w-full" placeholder="Titre"/>
+                <input type="text" name={'titre'} defaultValue={todo?.titre} className="input w-full" placeholder="Titre"/>
 
                 <legend className="fieldset-legend text-gray-300">Description</legend>
-                <textarea className="textarea h-24 w-full" name={'description'} placeholder="Bio"></textarea>
+                <textarea className="textarea h-24 w-full" defaultValue={todo?.description} name={'description'} placeholder="Bio"></textarea>
 
                 <div className={ "flex flex-row gap-2 mt-2"}>
-                    <input type={"date"} name={'date'} className="input w-full" placeholder="Date"/>
+                    <input type={"date"} defaultValue={todo?.date} name={'date'} className="input w-full" placeholder="Date"/>
 
-                    <select defaultValue="Pick a color" className="select" name={'priority'}>
+                    <select defaultValue={todo?.priority} className="select" name={'priority'}>
                         <option disabled={true}>Priority</option>
                         <option>Low</option>
                         <option>Medium</option>
@@ -94,7 +99,7 @@ export default function AddNewTask({ setFirstEntrer}) {
                 </div>
 
                 <button className="btn btn-soft btn-success mt-4">
-                    { isLoadingButton? <span className="loading loading-bars loading-md"></span> : "Ajouter"}
+                    { isLoadingButton? <span className="loading loading-bars loading-md"></span> : "Update"}
                 </button>
             </fieldset>
         </form>
