@@ -4,8 +4,6 @@
 
 Une application de gestion de tâches moderne construite avec **React.js**. Elle utilise le **Context API** pour la gestion globale des données et **localStorage** pour la persistance des tâches.
 
-> Exemple : Une application de gestion de tâches simple avec React.js et stockage local.
-
 ---
 
 ## 🚀 Fonctionnalités
