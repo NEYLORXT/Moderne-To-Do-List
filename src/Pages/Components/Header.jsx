@@ -1,4 +1,4 @@
-import Navbar from "./nav.jsx";
+import Navbar from "./Nav.jsx";
 
 export default function Header({ setShowList, setFirstEntrer}) {
     return <header>

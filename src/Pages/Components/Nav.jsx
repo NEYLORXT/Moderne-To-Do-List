@@ -12,7 +12,7 @@ export default function Nav({setShowList, setFirstEntrer}) {
     }
 
     return <nav>
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm" >
             <div className="flex-1">
                 <p className="text-gray-200 text-xl font-bold ml-2">To-Do List</p>
             </div>
@@ -24,7 +24,7 @@ export default function Nav({setShowList, setFirstEntrer}) {
                     <li>
                         <details>
                             <summary className={"btn btn-soft btn-accent mx-1"}>Menu</summary>
-                            <ul className="bg-base-100 rounded-t-none p-2">
+                            <ul className="bg-base-100 rounded-t-none p-2 z-100">
                                 <li >
                                     <button onClick={() => handleClick_setFirstEntrer()}>
                                         Add
