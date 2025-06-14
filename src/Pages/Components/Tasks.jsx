@@ -15,8 +15,9 @@ export default function Tasks({ setFirstEntrer}) {
     const [edit, setEdit] = useState(false);
 
     return (
-        <ul className={`list bg-base-100 mb-20 rounded-box w-full shadow-md text-left h-130 md:h-200 
-        overflow-y-auto border-accent border-3 shadow-accent px-3 py-2 ${edit && "justify-center align-center"}`}>
+        <ul className={`list bg-base-100  rounded-box w-full shadow-md text-left h-130 md:h-200 
+        overflow-y-auto border-accent border-3 shadow-accent px-3 py-2
+        ${edit && "justify-center align-center"}`}>
 
             {
                 !edit ? (todos.length > 0 ) ?
