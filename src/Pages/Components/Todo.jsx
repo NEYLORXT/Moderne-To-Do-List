@@ -35,7 +35,7 @@ export default function Todo({todo, index, setCurrentTodo, setEdit}){
     }
 
     return(
-        <div key={todo.id} className={`border-3 border-accent mb-3 rounded-tr-xl rounded-bl-xl bg-info-content ${checked ? "line-through" : ""}`}>
+        <div key={todo.id} className={`border-3 border-accent mb-5 rounded-tr-xl rounded-bl-xl bg-info-content ${checked ? "line-through" : ""}`}>
 
             <div className={"px-2 pt-2"}>
                 <input type="checkbox" checked={checked} onChange={updateTodo} className="checkbox checkbox-primary" />
