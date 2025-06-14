@@ -49,7 +49,7 @@ Une application de gestion de tâches moderne construite avec **React.js**. Elle
 git clone https://github.com/NEYLORXT/Moderne-To-Do-List.git
 
 # Aller dans le dossier
-cd todo-app-react
+cd Moderne-To-Do-List
 
 # Installer les dépendances
 npm install
